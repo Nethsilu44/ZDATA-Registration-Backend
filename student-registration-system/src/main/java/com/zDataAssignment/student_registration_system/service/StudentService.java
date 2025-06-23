@@ -19,7 +19,7 @@ public class StudentService {
     public Student createStudent(StudentDTO studentDTO){
         for(Student student : studentMap.values()) {
             if (student.getEmail().equals(studentDTO.getEmail())) {
-                throw new ConflictException("Email already exists");
+                throw new ConflictException("Email already exists" + studentDTO.getEmail());
             }
         }
         if (studentDTO.getName() == null || studentDTO.getName().isBlank()) {

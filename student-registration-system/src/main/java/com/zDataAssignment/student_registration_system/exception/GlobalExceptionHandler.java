@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDateTime;
 import java.util.NoSuchElementException;
 
-@RestController
+@RestControllerAdvice
 public class GlobalExceptionHandler {
 
     // Handle 404-style exceptions
